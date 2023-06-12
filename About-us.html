@@ -13,9 +13,166 @@
     <link rel="stylesheet" href="./Resources/CSS/style.css">
     <link rel="stylesheet" type="text/css"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <style>
+            /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #464545;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+        </style>
 </head>
 
 <body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-secondary">
+            <div class="container">
+                <a class="navbar-brand">
+                    <img class="img1" src="./Resources/images/logo_image.png" alt="Bootstrap">
+                </a>
+
+                <h1 class="text-info bs-info-border-subtle" style="position: absolute; margin-left: 100px;"> FIT FACTORY
+                </h1>
+
+            </div>
+            <div class="container-fluid  " style="float: right; display: block;position: relative;margin-left: 600px;">
+
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent" ">
+                    <ul class=" navbar-nav me-auto mb-2 mb-lg-0 ">
+
+                        <li class=" nav-item dropdown">
+
+                    <a class="nav-link  text-warning" href="./index.html" role="button"
+                        aria-expanded="false">
+                        HOME
+                    </a>
+                  
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link active text-warning" aria-current="page" href="./About-us.html"
+                            target="_blank">ABOUT
+                            US</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active text-warning" aria-current="page" href="./About-us.html#CONTACT"
+                            target="_blank">CONTACT US</a>
+                    </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+            <nav class="navbar bg-secondary  ">
+                <form class="container-fluid justify-content-start ">
+                    <button class="btn btn-success  " type="button">
+                        <a href="./Join-now-page.html" class="list-group-item list-group-item-action active"
+                            target="_blank">
+                            JOIN NOW
+                        </a>
+                    </button>
+
+                </form>
+            </nav>
+
+          
+
+                    <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-warning" style="width:auto;">Login</button>
+              
+                    <div id="id01" class="modal">
+                      
+                      <form class="modal-content animate" action="#" method="post" name="myform" onsubmit="return validateform()">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                          <img src="./Resources/images/img2_avatar.jfif" alt="Avatar" class="avatar" id="avt">
+                        </div>
+                    
+                        <div class="container">
+                          <label for="uname"><b>Username</b></label>
+                          <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" required onclick="verify()">
+                            
+                          <button type="submit" >Login</button>
+                          <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                          </label>
+                        </div>
+                    
+                        <div class="container">
+                          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                          <span class="psw"> <a href="#">Forgotpassword</a></span>
+                        </div>
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                          </div>
+                      </form>
+                    </div>
+                    
+                    
+        </nav>
+    </header>
+
+
     <div class="container">
         <div class="jumbotron text-center">
             <h1 class="display-4 text-primary"><b>About Us</b></h1>
@@ -161,7 +318,31 @@
     
 
 
+            <script>
+                function validateform(){
+                    var a=document.myform.uname.value
+                    var b=document.myform.psw.value
+        
+                    if(a==null || a==""){
+                        alert('Enter your username')
+                        return false;
+                    }else if(b.length<6){
+        alert("Password must be at least 8 characters long.")
+        return false;
+        b.focus();
+                    }
+                }
+            </script>
 
+<script>var x=document.getElementById("psw")
+    function verify(){
+        if(x.type==='password'){
+            x.type='text'
+        }
+        else{
+            x.type='password';
+        }
+    }</script>
 
 </body>
 
