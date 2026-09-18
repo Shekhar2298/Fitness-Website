@@ -1,20 +1,17 @@
 const headimg=document.getElementById('h1main')
-let colorchangeh1=function(){
-    headimg.style.color='red'
+if (headimg) {
+  headimg.onmouseenter=()=>{ headimg.style.color='var(--primary)' }
 }
-headimg.onmouseclick=colorchangeh1
 
 const head2img=document.getElementById('h3main')
-let colorchangeh3=function(){
-    head2img.style.color='blue'
+if (head2img) {
+  head2img.onmouseenter=()=>{ head2img.style.color='var(--primary)' }
 }
-head2img.onmousemove=colorchangeh3
 
 const head3img=document.getElementById('h5main')
-let colorchangeh5=function(){
-    head3img.style.color='red'
+if (head3img) {
+  head3img.onmouseenter=()=>{ head3img.style.color='var(--primary)' }
 }
-head3img.onmousemove=colorchangeh5
    
 var modal = document.getElementById('id01');
 
@@ -116,6 +113,5 @@ function validateform(){
 function create(){
   window.location="join-now-page.html"
 }
-
 
 
