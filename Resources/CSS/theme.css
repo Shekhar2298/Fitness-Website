@@ -705,13 +705,20 @@ body.page .carousel-control-next {
 
 /* Login modal */
 body.page .modal {
-  z-index: 2000;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
   padding: 1rem;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   background: rgba(2, 8, 6, 0.82);
   backdrop-filter: blur(10px);
+}
+
+body.page .modal[style*="display: block"],
+body.page .modal[style*="display: flex"] {
+  display: flex !important;
 }
 
 body.page .modal-content {
