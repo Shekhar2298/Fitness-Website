@@ -707,14 +707,18 @@ body.page .carousel-control-next {
 body.page .modal {
   z-index: 2000;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   background: rgba(2, 8, 6, 0.82);
   backdrop-filter: blur(10px);
 }
 
 body.page .modal-content {
   width: min(520px, 100%) !important;
-  margin: 4vh auto !important;
-  overflow: hidden;
+  max-height: calc(100vh - 2rem);
+  margin: 0 !important;
+  overflow-y: auto;
   border: 1px solid var(--line) !important;
   border-radius: var(--radius) !important;
   color: var(--text) !important;
