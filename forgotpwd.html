@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reset Password | Fit Factory</title>
     <link rel="stylesheet" href="./Resources/CSS/theme.css">
 </head>
-<body class="page page-form">
-    
+<body class="page page-login">
+    <main class="login-page-shell">
+        <a href="./index.html" class="login-back-link">&larr; Back to Home</a>
+        <section class="login-card" aria-labelledby="reset-title">
+            <div class="login-brand"><img src="./Resources/images/logo_image.png" alt="Fit Factory logo"><span>FIT FACTORY</span></div>
+            <h1 id="reset-title">Reset your password</h1>
+            <p class="login-intro">Enter your email and we’ll help you get back into your account.</p>
+            <form action="#" method="post"><label for="reset-email">Email address</label><input type="email" id="reset-email" placeholder="you@example.com" required><button type="submit" class="login-submit">Send reset link</button></form>
+            <div class="login-actions"><a href="./login.html">Back to Login</a><a href="./Join-now-page.html">Create account</a></div>
+        </section>
+    </main>
 </body>
 </html>
