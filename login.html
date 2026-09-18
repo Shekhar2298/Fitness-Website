@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | FIT FACTORY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Resources/CSS/style.css">
+    <link rel="stylesheet" href="./Resources/CSS/theme.css">
+</head>
+
+<body class="page page-login">
+    <main class="login-page-shell">
+        <a href="./index.html" class="login-back-link">&larr; Back to Home</a>
+        <section class="login-card" aria-labelledby="login-title">
+            <div class="login-brand">
+                <img src="./Resources/images/logo_image.png" alt="Fit Factory logo">
+                <span>FIT FACTORY</span>
+            </div>
+            <h1 id="login-title">Welcome back</h1>
+            <p class="login-intro">Log in to continue your fitness journey.</p>
+            <form action="#" method="post" name="myform" onsubmit="return validateform()">
+                <label for="uname">Username</label>
+                <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+                <label for="psw">Password</label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                <label class="login-check"><input type="checkbox" onclick="verify()"> Show password</label>
+                <button type="submit" class="login-submit">Login</button>
+                <label class="login-check"><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                <div id="pswvalid" class="login-password-help">
+                    <h5>Password must contain the following:</h5>
+                    <p id="letter" class="invalid">&#x2713; A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">&#x2713; A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">&#x2713; A <b>number</b></p>
+                    <p id="length" class="invalid">&#x2713; Minimum <b>8 characters</b></p>
+                </div>
+            </form>
+            <div class="login-actions">
+                <a href="./Join-now-page.html">Sign up</a>
+                <a href="./index.html">Back to Home</a>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
