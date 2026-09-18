@@ -35,142 +35,69 @@ backface-visibility:visible;
    }
 
 </style>
-    
+    <link rel="stylesheet" href="./Resources/CSS/theme.css">
 </head>
 
-<body >
+<body class="page page-form page-join">
     <h1 class="th">Registration Form</h1>
-    <table class="table1">
-        <form class="row g-3 container" method="post" name="form1" action="#" onsubmit="return valid()">
-            <tr>    <th style="color: rgb(43, 226, 73);">Fill info properly-</th>
-                <th></th>
-            </tr>
-        <tr></tr>
-        <tr><td><div class="col-md-6 required">
-            <label for="NameInput" id="namestar" class="form-label" >Name:</label></td>
-          <td>  <input type="text" class="form-control" id="NameInput" name="Name" placeholder="Enter your name" required>
-          </div></td>
-        </tr>
-            <tr>
-                <td>
-                    <div class="col-md-6 required">
-                        <label for="inputEmail4" class="form-label" id="namestar">Email ID:</label>
-                </td>
-                <td> <input type="text" class="form-control" id="inputEmail4" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Enter Email-ID" name="Emailid" >
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="col-md-6 required">
-                        <label for="inputmobile" class="form-label" id="namestar">Mobile Number:</label>
-                </td>
-                <td>
-                    <input type="text" pattern="[789][0-9]{9}" title="Enter valid number" class="form-control" id="inputmobile" placeholder="Enter Mobile Number" name="contactmobi" required>
-                    </div>
-                </td>
-            </tr>
-          
-
-            
-            <tr>
-                <td>
-                    <div class="col-md-6 required">
-                        <label for="country" class="form-label" id="namestar" >Country:</label>
-                </td>
-                <td> 
-                    <select onchange="print_state('states',this.selectedIndex);" name=" " id="country" class="form-select" style="height: 32px; width: 500px;" required>
-                        <option value=" ">--Select country--</option>
-                    </select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="col-md-4 required">
-                        <label for="state" class="form-label"  id="namestar">State:</label>
-                </td>
-                <td><select onchange="print_cities('cities',this.selectedIndex);" name=" " id="states" class="form-select" style="height: 32px; width: 500px;" required>
-              <option value=" ">--Select state--</option>
-              
+    <main class="table1">
+        <h2>Fill info properly-</h2>
+        <form class="row g-3" method="post" name="form1" action="#" onsubmit="return valid()">
+            <div class="col-md-6 required">
+                <label for="NameInput" id="namestar" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="NameInput" name="Name" placeholder="Enter your name" required>
+            </div>
+            <div class="col-md-6 required">
+                <label for="inputEmail4" class="form-label" id="namestar">Email ID:</label>
+                <input type="text" class="form-control" id="inputEmail4" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Enter Email-ID" name="Emailid" required>
+            </div>
+            <div class="col-md-6 required">
+                <label for="inputmobile" class="form-label" id="namestar">Mobile Number:</label>
+                <input type="text" pattern="[789][0-9]{9}" title="Enter valid number" class="form-control" id="inputmobile" placeholder="Enter Mobile Number" name="contactmobi" required>
+            </div>
+            <div class="col-md-6 required">
+                <label for="country" class="form-label" id="namestar">Country:</label>
+                <select onchange="print_state('states',this.selectedIndex);" name="country" id="country" class="form-select" required>
+                    <option value=" ">--Select country--</option>
                 </select>
-       </div>
-                </td>
-            </tr>
-           
-            <tr>
-                <td>
-                    <div class="col-md-4 required">
-                        <label for="city" class="form-label"  id="namestar">City:</label>
-                </td>
-                <td><input id="city" class="form-control" style="height: 32px; width: 500px;" placeholder="Enter your city" required>
-              
-       </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="col-12 required">
-                        <label for="inputAddress" class="form-label" id="namestar">Address:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Street" name="address" required>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-
-                <td>
-                    <div class="col-md-2 required">
-                        <label for="inputZip" class="form-label" id="namestar">Zip Code:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control" id="inputZip" placeholder="Enter Zip Code" name="zipy" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$" required>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-
-                <td>
-                    <div class="col-md-2 required">
-                        <label for="psw" class="form-label" id="namestar">Password:</label>
-                </td>
-                <td>
-                    <input type="password"  class="form-control" id="inputpsw" placeholder="Enter password" name="psw" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{6,}$"   required>
-                    </div>
-                 
-                     
-                    </td>
-            </tr>
-            <tr>
-
-                <td>
-                    <div class="col-md-2 required">
-                        <label for="cfpsw" class="form-label" id="namestar">Confirm Password:</label>
-                </td>
-                <td>
-                    <input type="password"  class="form-control" id="inputpsw" placeholder="Enter password" name="cfpsw" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{6,}$"   required>
-                    </div>
-            <tr><td><div class="col-12">
+            </div>
+            <div class="col-md-6 required">
+                <label for="states" class="form-label" id="namestar">State:</label>
+                <select onchange="print_cities('cities',this.selectedIndex);" name="state" id="states" class="form-select" required>
+                    <option value=" ">--Select state--</option>
+                </select>
+            </div>
+            <div class="col-md-6 required">
+                <label for="city" class="form-label" id="namestar">City:</label>
+                <input id="city" name="city" class="form-control" placeholder="Enter your city" required>
+            </div>
+            <div class="col-12 required">
+                <label for="inputAddress" class="form-label" id="namestar">Address:</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Street" name="address" required>
+            </div>
+            <div class="col-md-6 required">
+                <label for="inputZip" class="form-label" id="namestar">Zip Code:</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="Enter Zip Code" name="zipy" inputmode="numeric" pattern="[0-9-]{5,10}" required>
+            </div>
+            <div class="col-md-6 required">
+                <label for="inputpsw" class="form-label" id="namestar">Password:</label>
+                <input type="password" class="form-control" id="inputpsw" placeholder="Enter password" name="psw" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$" required>
+            </div>
+            <div class="col-md-6 required">
+                <label for="confirmpsw" class="form-label" id="namestar">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmpsw" placeholder="Enter password" name="cfpsw" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$" required>
+            </div>
+            <div class="col-12">
                 <div class="form-check">
-                  <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-                  <label class="form-check-label" for="invalidCheck3" style="color: brown;">
-                    Agree to terms and conditions
-                  </label>
-                 
-                </div></td></tr>
-           
-            <tr><td></td>
-                <td>
-                    <div class="col-12">
-                        <button type="submit" value="send" class="btn btn-primary" name="submit" id="datasend" >Sign Up</button>
-                    </div>
-                </td>
-               
-            </tr>
-
-    </table>
-    </form>
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                    <label class="form-check-label" for="invalidCheck3">Agree to terms and conditions</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" value="send" class="btn btn-primary" name="submit" id="datasend">Sign Up</button>
+            </div>
+        </form>
+    </main>
 
 <script src="./Script.js/countrylist.js"></script>
 <script type="text/javascript" language="javascript">
