@@ -1658,7 +1658,7 @@ body.page footer + .container-fluid.text-secondary .nav-link {
     display: flex;
     justify-content: flex-end;
     visibility: hidden;
-    background: rgba(2, 8, 6, 0.55);
+    background: var(--ink);
     opacity: 0;
     transition: opacity 220ms ease, visibility 220ms ease;
   }
