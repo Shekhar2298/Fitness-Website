@@ -72,52 +72,7 @@
 
                 </form>
             </nav>
-            <button onclick="document.getElementById('id01').style.display='flex'" class="btn btn-warning"
-                style="width:auto;">Login</button>
-
-            <div id="id01" class="modal">
-
-                <form class="modal-content animate" action="#" method="post" name="myform"
-                    onsubmit="return validateform()">
-                    <div class="imgcontainer">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                            title="Close Modal">&times;</span>
-                        <img src="./Resources/images/img2_avatar.jfif" alt="Avatar" class="avatar" id="avt">
-                    </div>
-
-                    <div class="container vlid">
-                        <label for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
-
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                        <span>
-                            <input type="checkbox" onclick="verify()">Show password
-                            </span>
-                        <button type="submit" value="Login">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                    </div>
-
-                    <div class="container">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                            class="cancelbtn">Cancel</button>
-                            <button class="btn btn-warning" type="button" onclick="create()" style="max-width:110px;" value="signUp">Sign up</button>
-                        <span class="psw"> <a href="#">Forgotpassword</a></span>
-                    </div>
-                    <div id="pswvalid" class="container">
-                        <h5>Password must contain the following:</h5>
-                        <p id="letter" class="invalid">&#x2713; A <b>lowercase</b> letter</p>
-                        <p id="capital" class="invalid">&#x2713; A <b>capital (uppercase)</b> letter</p>
-                        <p id="number" class="invalid">&#x2713; A <b>number</b></p>
-                        <p id="length" class="invalid">&#x2713; Minimum <b>8 characters</b></p>
-                       
-                    </div>
-
-        </form>
-        </div>
-       
+            <a href="./login.html" class="btn btn-warning page-login-link">Login</a>
 
         </nav>
     </header>
